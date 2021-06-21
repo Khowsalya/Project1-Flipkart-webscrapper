@@ -1,0 +1,40 @@
+<head>
+    <meta charset="UTF-8">
+    <title>ProductInfo Page</title>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+<h2>Product_Details_Table</h2>
+<div class="table-wrapper">
+    <table class="fl-table">
+        <thead>
+
+          <tr>
+            {% for col in column_names %}
+            <th>
+
+              {{col}}
+
+            </th>
+            {% endfor %}
+          </tr>
+
+        </thead>
+        <tbody>
+          {% for row in row_data %}
+          <tr>
+            {% for col, row_ in zip(column_names, row) %}
+            <td>{{row_}}</td>
+            {% endfor %}
+          </tr>
+          {% endfor %}
+
+
+        </tbody>
+
+</table>
+</div>
+</body>
+</html>

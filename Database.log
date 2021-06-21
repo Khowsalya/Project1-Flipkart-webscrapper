@@ -1,0 +1,35 @@
+2021-06-21 21:48:51,827:Database: 'NoneType' object is not iterable
+Traceback (most recent call last):
+  File "C:\Users\Khowsalya\INeuron-files\projects\Flipkart_review_scrapper\app.py", line 105, in index
+    for i in flipkart_html.find("div", {"class": "_2MImiq"}):
+TypeError: 'NoneType' object is not iterable
+2021-06-21 21:56:27,580:Database: could not convert string to float: 'nosalesprice'
+Traceback (most recent call last):
+  File "C:\Users\Khowsalya\INeuron-files\projects\Flipkart_review_scrapper\app.py", line 64, in index
+    df['new_salesprice'] = df['new_salesprice'].astype(float).sort_values(ascending=True)
+  File "C:\Users\Khowsalya\Anaconda3\envs\Flipkart_review_scrapper\lib\site-packages\pandas\core\generic.py", line 5548, in astype
+    new_data = self._mgr.astype(dtype=dtype, copy=copy, errors=errors,)
+  File "C:\Users\Khowsalya\Anaconda3\envs\Flipkart_review_scrapper\lib\site-packages\pandas\core\internals\managers.py", line 604, in astype
+    return self.apply("astype", dtype=dtype, copy=copy, errors=errors)
+  File "C:\Users\Khowsalya\Anaconda3\envs\Flipkart_review_scrapper\lib\site-packages\pandas\core\internals\managers.py", line 409, in apply
+    applied = getattr(b, f)(**kwargs)
+  File "C:\Users\Khowsalya\Anaconda3\envs\Flipkart_review_scrapper\lib\site-packages\pandas\core\internals\blocks.py", line 595, in astype
+    values = astype_nansafe(vals1d, dtype, copy=True)
+  File "C:\Users\Khowsalya\Anaconda3\envs\Flipkart_review_scrapper\lib\site-packages\pandas\core\dtypes\cast.py", line 997, in astype_nansafe
+    return arr.astype(dtype, copy=True)
+ValueError: could not convert string to float: 'nosalesprice'
+2021-06-21 21:57:31,523:Database: could not convert string to float: 'nosalesprice'
+Traceback (most recent call last):
+  File "C:\Users\Khowsalya\INeuron-files\projects\Flipkart_review_scrapper\app.py", line 64, in index
+    df['new_salesprice'] = df['new_salesprice'].astype(float).sort_values(ascending=True)
+  File "C:\Users\Khowsalya\Anaconda3\envs\Flipkart_review_scrapper\lib\site-packages\pandas\core\generic.py", line 5548, in astype
+    new_data = self._mgr.astype(dtype=dtype, copy=copy, errors=errors,)
+  File "C:\Users\Khowsalya\Anaconda3\envs\Flipkart_review_scrapper\lib\site-packages\pandas\core\internals\managers.py", line 604, in astype
+    return self.apply("astype", dtype=dtype, copy=copy, errors=errors)
+  File "C:\Users\Khowsalya\Anaconda3\envs\Flipkart_review_scrapper\lib\site-packages\pandas\core\internals\managers.py", line 409, in apply
+    applied = getattr(b, f)(**kwargs)
+  File "C:\Users\Khowsalya\Anaconda3\envs\Flipkart_review_scrapper\lib\site-packages\pandas\core\internals\blocks.py", line 595, in astype
+    values = astype_nansafe(vals1d, dtype, copy=True)
+  File "C:\Users\Khowsalya\Anaconda3\envs\Flipkart_review_scrapper\lib\site-packages\pandas\core\dtypes\cast.py", line 997, in astype_nansafe
+    return arr.astype(dtype, copy=True)
+ValueError: could not convert string to float: 'nosalesprice'

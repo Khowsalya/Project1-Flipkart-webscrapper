@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+<head>
+<title>Ratings_Info</title>
+<section>
+  <h2>{{searchString}} ratings </h2>
+  <img src="data:image/png;base64, {{ plot_url }}">
+  <h3> Seller's Ratings above 3.5</h3>
+  {{data | safe}}
+  <h1>Product_Price_Range of {{searchString}}</h1>
+  <p>"Starting price -- <mark>{{minPrice}}</mark> and Maximum price -- <mark>{{maxPrice}}</mark></p>
+  <p>Use the ratings chart and the price range in the below filter to get the best suited products of your choice.</p>
+  <p><mark> Incase no need of filters </mark>just <mark>click "above 1"  option in Ratings_list</mark> and give <mark> submit </mark> to move next page for getting product details</p>
+  <br>
+  <br>
+</section>
+</head>
+<body>
+<form action="/quiz_answers" method="POST">
+  <label for="minprice">minimum_price:</label>
+  <input type="text" id="minprice" name="minprice"><br><br>
+  <label for="maxprice">maximum price:</label>
+  <input type="text" id="maxprice" name="maxprice"><br><br>
+  <label for="rating">Ratings_list</label>
+  <input list="browsers" id="rating" name="rating"><br><br>
+  <datalist id="browsers">
+    <option value="above 4">
+    <option value="above 3">
+    <option value="above 2">
+    <option value="above 1" >
+  </datalist>
+  <label for="rating">product_name</label>
+  <input type="text" id="product" name="product"  value={{searchString}}><br><br>
+  <input type="submit" value="Submit">
+</form>
+</body>
+</html>
